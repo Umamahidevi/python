@@ -1,0 +1,267 @@
+#1. Print numbers from 1 to 50
+for i in range(1, 51):
+    print(i, end=" ")
+
+#2. Print even numbers from 1 to 100
+for i in range(2, 101, 2):
+    print(i, end=" ")
+
+#3. Print odd numbers from 1 to 100
+for i in range(1, 101, 2):
+    print(i, end=" ")
+
+# 4. Multiplication table of 7
+for i in range(0, 11):
+    print(f"7 x {i} = {7 * i}")
+
+#5. Sum of numbers from 1 to 100
+total = 0
+for i in range(1, 101):
+    total += i
+print(total)
+
+#6. Reverse numbers from 50 to 1
+for i in range(50, 0, -1):
+    print(i, end=" ")
+
+#7. Count numbers divisible by 3 (1–100)
+count = 0
+for i in range(1, 101):
+    if i % 3 == 0:
+        count += 1
+print(count)  
+
+#8. Squares of numbers from 1 to 10
+for i in range(1, 11):
+    print(i**2, end=" ")
+
+#9. Cubes of first 10 numbers
+for i in range(1, 11):
+    print(i**3, end=" ")
+
+#10. Take input n, print 1 to n
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    print(i, end=" ")
+
+#11. Print numbers 1 to 20 using while loop
+i = 1
+while i <= 20:
+    print(i, end=" ")
+    i += 1
+
+#12. Factorial using while
+n = int(input("Enter number: "))
+fact = 1
+i = 1
+
+while i <= n:
+    fact *= i
+    i += 1
+
+print(fact)
+
+#13. Reverse a number using while
+num = int(input("Enter number: "))
+rev = 0
+
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num //= 10
+
+print(rev)
+
+#14. Count digits using while
+num = int(input("Enter number: "))
+count = 0
+
+while num > 0:
+    count += 1
+    num //= 10
+
+print(count)
+
+#15. Keep asking input until "stop" using while
+while True:
+    user = input("Enter something: ")
+    if user.lower() == "stop":
+        break
+
+#16. Pattern *
+for i in range(1, 5):
+    print("*" * i)
+
+#17. Pattern numbers
+for i in range(1, 5):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
+
+#18. Multiplication table (1 to 5)
+for i in range(1, 6):
+    for j in range(1, 11):
+        print(f"{i}x{j}={i*j}", end="  ")
+    print()
+
+#19. Print A B C pattern
+for i in range(3):
+    for j in ['A', 'B', 'C']:
+        print(j, end=" ")
+    print()
+
+#20. Matrix pattern
+num = 1
+for i in range(3):
+    for j in range(3):
+        print(num, end=" ")
+        num += 1
+    print()
+
+#21. Count total characters in a string
+string = input("Enter a string: ")
+print("Total characters:", len(string)) 
+
+#22. Count vowels in a string
+s = "uma maheswari"
+vowels = "aeiou"
+count = 0
+
+for i in s:
+    if i in vowels:
+        count += 1
+
+print(count)
+
+#23. Count consonants in a string
+s = "uma maheswari"
+vowels = "aeiou"
+count = 0
+
+for i in s:
+    if i not in vowels:
+        count += 1
+
+print(count)
+
+#24. Reverse a string using loop
+s = "uma maheswari"
+rev = ""
+for i in s:
+    rev = i + rev
+print(rev)
+
+#25. Check if string is palindrome
+s = "racecar"
+rev = ""
+for i in s:
+    rev = i + rev
+if s == rev:
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+#26. Print first 5 characters of a string
+s = "uma maheswari"
+print(s[:5])
+
+#27. Print last 3 characters
+s = "uma maheswari"
+print(s[-3:])
+
+#28. Print string in reverse using slicing
+s = "uma maheswari"
+print(s[::-1])
+
+#29. Print every 2nd character
+s = "uma maheswari"
+print(s[::2])
+
+#30. Remove first and last character from a string
+s = "uma maheswari"
+print(s[1:-1])
+
+#31. Create a list of 5 numbers and print sum
+l = [10, 20, 30, 40, 50]
+total = 0
+
+for i in l:
+    total += i
+
+print(total)       
+
+#32. Find maximum value in a list
+l = [10, 20, 30, 40, 50]
+max_val = l[0]
+
+for i in l:
+    if i > max_val:
+        max_val = i
+
+print(max_val)
+
+#33. Find minimum value in a list
+l = [10, 20, 30, 40, 50]
+min_val = l[0]
+
+for i in l:
+    if i < min_val:
+        min_val = i
+
+print(min_val)
+
+#34. Count total elements in a list
+l = [10, 20, 30, 40, 50]
+count = 0
+
+for i in l:
+    count += 1
+
+print(count)
+
+#35. Check if element exists in a list
+numbers = [10, 20, 30, 40, 50]   
+element = 30
+exists = False
+for i in numbers:
+    if i == element:
+        exists = True
+        break
+print("Element exists:", exists)
+
+#36. Add 3 elements using append()
+l = [10, 20]
+l.append(30)
+l.append(40)
+l.append(50)
+
+print(l)
+
+#37. Insert element at specific index
+l = [10, 20, 50, 60]
+l.insert(2, 3)
+print(l)
+
+#38. Remove element using remove()
+l = [10, 20, 30, 40, 50]
+l.remove(30)
+print(l)
+
+#39. Reverse list without using .reverse()
+l = [10, 20, 30, 40, 50]
+rev = []
+
+for i in l:
+    rev = [i] + rev
+
+print(rev)
+
+#40. Sort list without using .sort()
+l = [9, 5, 2, 8, 1]
+
+for i in range(len(l)):
+    for j in range(i+1, len(l)):
+        if l[i] > l[j]:
+            l[i], l[j] = l[j], l[i]
+
+print(l)
